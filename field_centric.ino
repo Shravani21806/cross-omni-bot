@@ -141,6 +141,7 @@ void loop() {
   pid = kp * p + ki * i + kd * d;
   pid = constrain(pid, -120, 120);
   R = sqrt((RX * RX) + (RY * RY));
+//field centric
   theta = atan2(RY, RX) * 180 / 3.142;
   theta1 = theta + (setpoint + yaw);
   a = R * sin((theta1 - 45) * 3.142 / 180);
